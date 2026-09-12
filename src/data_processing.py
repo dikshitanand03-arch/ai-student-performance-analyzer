@@ -85,8 +85,9 @@ def engineer_features(df: pd.DataFrame, risk_threshold: float = 50.0) -> pd.Data
         (df_fe["study_hours"] / 25.0) * (df_fe["attendance"] / 100.0) * 100, 2
     )
 
-    # Target Feature for Classification: At-Risk Status
-    df_fe["at_risk"] = (df_fe["final_marks"] < risk_threshold).astype(int)
+    # Target Feature for Classification: At-Risk Status (only if target final_marks column exists)
+    if "final_marks" in df_fe.columns:
+        df_fe["at_risk"] = (df_fe["final_marks"] < risk_threshold).astype(int)
 
     return df_fe
 
