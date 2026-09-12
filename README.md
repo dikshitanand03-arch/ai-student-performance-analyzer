@@ -131,6 +131,45 @@ Open your browser at `http://localhost:8501`.
 
 ---
 
+## 🐙 Pushing to GitHub
+
+### 1. Create a New Repository on GitHub
+1. Go to [GitHub](https://github.com/new) and log in.
+2. Create a new public repository named `ai-student-performance-analyzer`.
+3. Do **not** initialize it with a README, `.gitignore`, or license (we already have them!).
+
+### 2. Connect Local Repository & Push
+Open your terminal inside the project directory and run:
+
+```bash
+# Rename default branch to main
+git branch -M main
+
+# Add your GitHub repository as remote origin (replace YOUR_USERNAME with your GitHub handle)
+git remote add origin https://github.com/YOUR_USERNAME/ai-student-performance-analyzer.git
+
+# Push your code to GitHub
+git push -u origin main
+```
+
+---
+
+## 🌐 Deploying to Streamlit Community Cloud (Free)
+
+You can host your interactive web application for free on Streamlit Community Cloud in 2 minutes:
+
+1. Sign up / Log in to [share.streamlit.io](https://share.streamlit.io/) using your GitHub account.
+2. Click **"New App"**.
+3. Select your repository: `YOUR_USERNAME/ai-student-performance-analyzer`.
+4. Set **Main file path**: `app.py`.
+5. *(Optional)* Under **Advanced settings**, add your `OPENAI_API_KEY` under secrets:
+   ```toml
+   OPENAI_API_KEY = "sk-..."
+   ```
+6. Click **Deploy!** 🚀
+
+---
+
 ## 🔑 AI Explanations (OpenAI Setup)
 
 To enable live OpenAI GPT advisory notes:
