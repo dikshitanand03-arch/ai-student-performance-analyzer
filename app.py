@@ -227,7 +227,7 @@ def main():
         with col_eda2:
             st.pyplot(plot_study_hours_vs_marks(df_processed))
             
-        st.markdown("<br>", unsafe_allow_dict=True)
+        st.markdown("<br>", unsafe_allow_html=True)
         col_eda3, col_eda4 = st.columns(2)
         with col_eda3:
             st.pyplot(plot_marks_distribution(df_processed))
@@ -368,7 +368,7 @@ def main():
             else:
                 st.warning(f"⚠️ {factor}")
                 
-        st.markdown("<br>", unsafe_allow_dict=True)
+        st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("### 🤖 AI Mentor Explanation & Actionable Advice")
         
         with st.spinner("Generating AI explanation..."):
